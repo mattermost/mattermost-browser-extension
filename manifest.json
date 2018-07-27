@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
     "minimum_chrome_version": "38",
-    "version": "1.0.0",
-    "author": "Shea Ivey",
+    "version": "0.0.1",
+    "author": "Joram Wilander",
     "name": "Mattermost Chrome Extension",
     "short_name": "mattermost-chrome-extension",
     "description": "Demo extension showing how to connect to a Mattermost user using OAuth2.",
