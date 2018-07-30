@@ -1,34 +1,32 @@
 {
-  "name": "react-chrome-extension",
-  "version": "1.0.0",
-  "description": "React Chrome Extension template for chrome extensions.",
+  "name": "mattermost-chrome-extension",
+  "version": "0.0.1",
+  "description": "Mattermost demo Chrome extension.",
   "files": [
     "*.md",
     "es",
     "src"
   ],
   "main": "main.js",
-  "scripts": {
-    "build": "webpack -p",
-    "dev": "webpack --watch",
-    "start": "webpack -p --watch"
-  },
-  "author": "Shea Ivey",
-  "license": "MIT",
+  "author": "Joram Wilander",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sheaivey/react-chrome-extension"
+    "url": "https://github.com/mattermost/mattermost-chrome-extension"
   },
-  "homepage": "https://github.com/sheaivey/react-chrome-extension",
+  "homepage": "https://github.com/mattermost/mattermost-chrome-extension",
   "keywords": [
+    "mattermost",
     "chrome",
     "extension"
   ],
   "dependencies": {
+    "react": "16.4.1",
+    "react-dom": "16.4.1",
+    "mattermost-redux": "1.2.0"
   },
   "peerDependencies": {},
   "devDependencies": {
-    "axios": "0.17.1",
     "babel-cli": "6.26.0",
     "babel-core": "6.26.3",
     "babel-eslint": "8.2.6",
@@ -44,11 +42,18 @@
     "babel-preset-stage-0": "6.24.1",
     "babel-preset-es2015": "6.24.1",
     "babel-preset-react": "6.24.1",
-    "react": "16.4.1",
-    "react-dom": "16.4.1",
+    "babel-runtime": "6.26.0",
+    "bundle-loader": "0.5.6",
+    "cross-env": "5.2.0",
+    "html-loader": "0.5.5",
+    "html-webpack-plugin": "3.2.0",
     "webpack": "4.16.1",
     "webpack-cli": "3.1.0",
     "webpack-node-externals": "1.7.2",
     "webpack-pwa-manifest": "3.6.2"
+  },
+  "scripts":{
+    "build": "cross-env NODE_ENV=production webpack --display-error-details --verbose --progress",
+    "run": "cross-env NODE_ENV=production webpack --progress --watch"
   }
 }

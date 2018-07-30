@@ -3,18 +3,18 @@
     "minimum_chrome_version": "38",
     "version": "0.0.1",
     "author": "Joram Wilander",
-    "name": "Mattermost Chrome Extension",
+    "name": "Mattermost Demo Extension",
     "short_name": "mattermost-chrome-extension",
     "description": "Demo extension showing how to connect to a Mattermost user using OAuth2.",
     "offline_enabled": true,
-    "app": {
-        "background": {
-            "scripts": ["src/main.js"],
-            "persistent": false
-        }
+    "permissions": ["identity", "storage"],
+    "browser_action": {
+        "default_popup": "dist/main.html",
+        "default_icon": {
+            "32": "/public/img/icon.png"
+        },
+        "default_title": "Mattermost Demo Extension"
     },
-
-    "permissions": [],
     "icons": {
         "128": "/public/img/icon.png"
     }

@@ -2,16 +2,17 @@
     ./webpack.config.js
 */
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const STANDARD_EXCLUDE = [
   path.join(__dirname, 'node_modules'),
-  path.join(__dirname, 'non_npm_dependencies'),
 ];
 
 module.exports = {
-  entry: './src/app/index.js',
+  entry: ['babel-polyfill', './src/app/index.js', './src/main.html'],
   output: {
     path: path.resolve('dist'),
+    publicPath: '/static/',
     filename: 'bundle.js',
   },
   module: {
@@ -34,6 +35,25 @@ module.exports = {
               },
           ],
       },
+      {
+        test: /\.html$/,
+        use: [
+            {
+                loader: 'html-loader',
+                options: {
+                    attrs: 'link:href',
+                },
+            },
+        ],
+      },
     ],
   },
+  target: 'web',
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'main.html',
+      inject: 'head',
+      template: 'src/main.html',
+    })
+  ]
 }
