@@ -4,7 +4,9 @@ import {Client4} from 'mattermost-redux/client';
 // Set this to your Mattermost SiteURL.
 const MATTERMOST_URL = 'http://localhost:8065';
 // Set this to the Client ID received after registering an OAuth app with Mattermost.
-const OAUTH_APP_CLIENT_ID = '6jsbpzos3bff5k1fo9pazire8c';
+const OAUTH_APP_CLIENT_ID = 'FILL ME IN';
+// Set to blank or "saml". When set to "saml", automatically redirect user to the SAML IDP's login page, skipping the Mattermost login page.
+const LOGIN_HINT = '';
 
 export default class App extends React.Component {
     constructor(props) {
@@ -43,7 +45,7 @@ export default class App extends React.Component {
         this.oauthState = Math.random().toString(36);
         const state = encodeURIComponent(this.oauthState);
 
-        chrome.identity.launchWebAuthFlow({url: MATTERMOST_URL+'/oauth/authorize?response_type=token&client_id='+clientId+'&redirect_uri='+redirectUrl+'&state='+state, interactive: true}, this.completeLogin);
+        chrome.identity.launchWebAuthFlow({url: MATTERMOST_URL+'/oauth/authorize?response_type=token&client_id='+clientId+'&redirect_uri='+redirectUrl+'&state='+state+'&login_hint='+LOGIN_HINT, interactive: true}, this.completeLogin);
     }
 
     // Called when the OAuth flow is complete, parsing the state and access token out of the URL fragment and storing it.
