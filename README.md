@@ -47,7 +47,7 @@ This project demonstrates how to write a Chrome extension that uses OAuth 2.0 to
 
 ## The Code
 
-This extension uses [React](https://reactjs.org/), though it is not requirement for your extension.
+This extension uses [React](https://reactjs.org/), though it is not a requirement for your extension.
 
 The important demo code lives in `src/app/views/App.js`. Read the code and comments in there to get a better understanding of how it works.
 
