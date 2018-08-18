@@ -17,6 +17,7 @@ This project demonstrates how to write a Chrome extension that uses OAuth 2.0 to
 
 2. Create an OAuth 2.0 app on your Mattermost instance [with these instructions](https://docs.mattermost.com/developer/oauth-2-0-applications.html)
     * Make sure to copy the Client ID after the app is created
+    * Callback URL is `https://example-extension-id.chromiumapp.org/`, need to modify this later
     * Optionally, you can mark the app as trusted so users do not need to click "Allow" for the app when they log in
 
 3. Configure the extension by modifying the constants in `src/app/views/App.js`:
@@ -26,8 +27,13 @@ This project demonstrates how to write a Chrome extension that uses OAuth 2.0 to
 
 4. Install dependencies and build the extension:
     ```bash
+    # npm
     $ npm install
     $ npm run build
+
+    # yarn
+    $ yarn install
+    $ yarn build
     ```
 
 5. Add the extension to Chrome:
@@ -38,6 +44,7 @@ This project demonstrates how to write a Chrome extension that uses OAuth 2.0 to
    * Get the ID of your extension by looking at it's entry on `chrome://extensions/`
     * Set `ServiceSettings.AllowCorsFrom` in your `config.json` to `chrome-extension://<your-extension-id>`, e.g. `chrome-extension://ajfkdfomehaklgdhggbfhhicchlangjp`
     * Restart your Mattermost server
+   * Modify OAuth 2.0 app Callback URL in step 2, e.g. `https://ajfkdfomehaklgdhggbfhhicchlangjp.chromiumapp.org/`, `ajfkdfomehaklgdhggbfhhicchlangjp` is your extension id
 
 7. Use the extension
     * In the Chrome toolbar a Mattermost logo should have been added, click on it
