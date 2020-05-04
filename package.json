@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "react": "16.4.1",
-    "react-dom": "16.4.1",
+    "react-dom": "16.4.2",
     "mattermost-redux": "1.2.0"
   },
   "peerDependencies": {},
