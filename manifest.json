@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "author": "Joram Wilander",
   "name": "Mattermost Demo Extension",
-  "short_name": "mattermost-chrome-extension",
+  "short_name": "mattermost-browser-extension",
   "description": "Demo extension showing how to connect to a Mattermost user using OAuth2.",
   "permissions": ["identity", "storage"],
   "browser_action": {
