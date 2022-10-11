@@ -16,5 +16,10 @@
   },
   "icons": {
     "128": "/public/img/icon.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "browser-extension@mattermost.com"
+    }
   }
 }
