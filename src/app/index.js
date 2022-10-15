@@ -1,9 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./views/App";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const render = (Component) => {
-  ReactDOM.render(<App />, document.getElementById("root"));
+import App from './views/App';
+
+const render = () => {
+    ReactDOM.render(<App/>, document.getElementById('root'));
 };
 
 render();

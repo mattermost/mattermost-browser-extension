@@ -27,12 +27,21 @@
   "peerDependencies": {},
   "devDependencies": {
     "@babel/core": "7.19.3",
+    "@babel/eslint-parser": "7.19.1",
     "@babel/plugin-transform-runtime": "7.19.1",
     "@babel/preset-env": "7.19.4",
     "@babel/preset-react": "7.18.6",
     "@babel/runtime": "7.19.4",
     "babel-loader": "8.2.5",
     "cross-env": "7.0.3",
+    "eslint": "7.29.0",
+    "eslint-import-resolver-webpack": "0.13.1",
+    "eslint-plugin-babel": "5.3.1",
+    "eslint-plugin-header": "3.1.1",
+    "eslint-plugin-import": "2.23.4",
+    "eslint-plugin-mattermost": "github:mattermost/eslint-plugin-mattermost#46ad99355644a719bf32082f472048f526605181",
+    "eslint-plugin-react": "7.24.0",
+    "eslint-plugin-react-hooks": "4.3.0",
     "html-loader": "4.2.0",
     "html-webpack-plugin": "5.5.0",
     "webextension-polyfill": "0.10.0",
@@ -41,6 +50,7 @@
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --progress",
+    "check": "eslint --ext .js,.jsx,.tsx,.ts . --quiet --cache",
     "run": "cross-env NODE_ENV=production webpack watch --progress"
   }
 }
