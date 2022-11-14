@@ -12,8 +12,8 @@ This project demonstrates how to write a Browser extension that uses OAuth 2.0 t
 1. Clone this repository and `cd` into it:
 
    ```bash
-   $ git clone https://github.com/mattermost/mattermost-chrome-extension
-   $ cd mattermost-chrome-extension
+   $ git clone https://github.com/mattermost/mattermost-browser-extension
+   $ cd mattermost-browser-extension
    ```
 
 2. Create an OAuth 2.0 app on your Mattermost instance [with these instructions](https://docs.mattermost.com/developer/oauth-2-0-applications.html)
@@ -44,10 +44,10 @@ This project demonstrates how to write a Browser extension that uses OAuth 2.0 t
 
    - Chrome:
      - Go to `chrome://extensions/` in your Chrome browser
-     - Click "Load unpacked" and navigate to and select your `mattermost-chrome-extension` directory
+     - Click "Load unpacked" and navigate to and select your `mattermost-browser-extension` directory
    - Firefox:
      - Go to `about:debugging` in your Firefox browser
-     - Click "Load temporary add-on" and navigate to and select any file in `mattermost-chrome-extension` directory
+     - Click "Load temporary add-on" and navigate to and select any file in `mattermost-browser-extension` directory
 
 6. Allow cross-origin requests from your browser extension to Mattermost:
 
