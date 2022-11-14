@@ -6,3 +6,4 @@ node_modules
 .idea
 *.tar.gz
 .DS_Store
+.eslintcache

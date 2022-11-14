@@ -7,7 +7,6 @@
     "es",
     "src"
   ],
-  "main": "main.js",
   "author": "Joram Wilander",
   "license": "Apache-2.0",
   "repository": {
@@ -17,43 +16,41 @@
   "homepage": "https://github.com/mattermost/mattermost-chrome-extension",
   "keywords": [
     "mattermost",
-    "chrome",
+    "browser",
     "extension"
   ],
   "dependencies": {
-    "react": "16.4.1",
-    "react-dom": "16.4.2",
-    "mattermost-redux": "1.2.0"
+    "mattermost-redux": "1.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "peerDependencies": {},
   "devDependencies": {
-    "babel-cli": "6.26.0",
-    "babel-core": "6.26.3",
-    "babel-eslint": "8.2.6",
-    "babel-jest": "23.4.0",
-    "babel-loader": "7.1.5",
-    "babel-plugin-dynamic-import-node": "2.0.0",
-    "babel-plugin-module-resolver": "3.1.1",
-    "babel-plugin-transform-runtime": "6.23.0",
-    "babel-polyfill": "6.26.0",
-    "babel-preset-env": "1.7.0",
-    "babel-preset-es2015": "6.24.1",
-    "babel-preset-react": "6.24.1",
-    "babel-preset-stage-0": "6.24.1",
-    "babel-preset-es2015": "6.24.1",
-    "babel-preset-react": "6.24.1",
-    "babel-runtime": "6.26.0",
-    "bundle-loader": "0.5.6",
-    "cross-env": "5.2.0",
-    "html-loader": "0.5.5",
-    "html-webpack-plugin": "3.2.0",
-    "webpack": "4.16.1",
-    "webpack-cli": "3.1.0",
-    "webpack-node-externals": "1.7.2",
-    "webpack-pwa-manifest": "3.6.2"
+    "@babel/core": "7.19.3",
+    "@babel/eslint-parser": "7.19.1",
+    "@babel/plugin-transform-runtime": "7.19.1",
+    "@babel/preset-env": "7.19.4",
+    "@babel/preset-react": "7.18.6",
+    "@babel/runtime": "7.19.4",
+    "babel-loader": "8.2.5",
+    "cross-env": "7.0.3",
+    "eslint": "7.29.0",
+    "eslint-import-resolver-webpack": "0.13.1",
+    "eslint-plugin-babel": "5.3.1",
+    "eslint-plugin-header": "3.1.1",
+    "eslint-plugin-import": "2.23.4",
+    "eslint-plugin-mattermost": "github:mattermost/eslint-plugin-mattermost#46ad99355644a719bf32082f472048f526605181",
+    "eslint-plugin-react": "7.24.0",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "html-loader": "4.2.0",
+    "html-webpack-plugin": "5.5.0",
+    "webextension-polyfill": "0.10.0",
+    "webpack": "5.74.0",
+    "webpack-cli": "4.10.0"
   },
-  "scripts":{
-    "build": "cross-env NODE_ENV=production webpack --display-error-details --verbose --progress",
-    "run": "cross-env NODE_ENV=production webpack --progress --watch"
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --progress",
+    "check": "eslint --ext .js,.jsx,.tsx,.ts . --quiet --cache",
+    "run": "cross-env NODE_ENV=production webpack watch --progress"
   }
 }
